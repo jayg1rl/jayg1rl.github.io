@@ -1,0 +1,224 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Go places</title>
+    <meta name="description" content="">
+    <!-- <meta http-equiv="Cache-Control" content="public"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+       <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="home">
+
+    <div class="b-preloader animated yt-loader">
+        <div class="b-preloader__decor"></div>
+    </div>
+    <header class="b-header clearfix">
+        <a href="index.html" class="logo"> <img src="img/logo_small.png" alt="Go places" title="Go places"> <span>GO Places</span> </a>
+        <a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
+        <div class="b-header__ctrl">
+            <div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
+            <div class="b-header__ctrl__item">
+                <a href="#" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
+                </a>
+            </div>
+            <div class="b-header__ctrl__item">
+                <!--<a href="#" class="b-header__ctrl__item__search"></a>-->
+                <form class="searchbox">
+                    <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp()">
+                    <button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i>
+                    </button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
+            </div>
+        </div>
+        <!--.b-header__ctrl-->
+        <div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <nav class="b-nav fadein">
+            <ul>
+                <li class="menu-item-has-children">
+                    <a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
+                </li>
+                <li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
+                </li>
+                <li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
+                <li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+
+                <li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Most searched places</a>
+
+                </li>
+                <li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
+            </ul>
+        </nav>
+        <!--.b-nav-->
+    </header>
+    <!-- .b-header -->
+    <div class="b-main-container" id="content">
+        <div class="b-promo lazy" data-src="img/home-bg.jpg">
+            <div class="b-placeholder"></div>
+            <div class="b-stars">
+                <div class="stars"></div>
+            </div>
+            <div class="overlay"></div>
+            <div class="b-promo__search container">
+                <h1 class="b-promo__title">Find places or events with<p> GO-PLACES</p></h1>
+                <h6 class="b-promo__sub-title">See and visit interesting places. Share experiences with your friends.</h6>
+                <form method="post" action="#">
+                    <div class="b-promo__form">
+                        <div class="b-promo__form__col1">
+                            <input type="text" class="b-promo__form__input m--border-radius-left" placeholder="Find places or events" name="search"> </div>
+                        <div class="b-promo__form__col1">
+                            <input type="text" class="b-promo__form__input" placeholder="Enter Location" name="location"> </div>
+                        <div class="b-promo__form__col1">
+                            <select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
+                                <option value="United States">Choose a Country...</option>
+                                <option value="United Kingdom">Nigeria</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Aland Islands">Aland Islands</option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="Angola">Angola</option>
+                                <option value="Anguilla">Anguilla</option>
+                                <option value="Antarctica">Antarctica</option>
+                                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Armenia">Armenia</option>
+                                <option value="Aruba">Aruba</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Azerbaijan">Azerbaijan</option>
+                                <option value="Bahamas">Bahamas</option>
+                                <option value="Bahrain">Bahrain</option>
+                            </select>
+                        </div>
+                        <div class="b-promo__form__col2">
+                            <a href="places.html"><button class="btn btn-success m--border-radius-right">Search</button></a>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+        <script>
+            main_js = function () {
+
+                    'use strict';
+
+                    $('.b-slider').addClass('visible');
+
+                    //chosen-select init
+
+                    $(".chosen-select").chosen({
+                      disable_search_threshold: 10,
+                      no_results_text: "Oops, nothing found!",
+                      width: "100%"
+                    });
+
+
+                    //********************************************** Stars script **************************************** //
+
+                    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+                    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+                    if (isChrome || isSafari) {
+                        for (var e = 0; 400 > e; e++) {
+                            var f = document.createElement("div");
+                            f.className = "star";
+                            $(".stars").append(f);
+                            var g = (.4 * Math.random() + .1).toFixed(3)
+                                , h = 500 + 300 * Math.random();
+                            $(f).css("transform-origin", "0 0 " + h + "px")
+                                , $(f).css("transform", " translate3d(0,0,-" + h + "px) rotateY(" + 360 * Math.random() + "deg) rotateX(" + -50 * Math.random() + "deg) scale(" + g + "," + g + ")");
+                        }
+                    }
+
+
+                    $(".owl-carousel-1").owlCarousel({
+                        loop: true
+                        , margin: 30
+                        , responsiveClass: true
+                        , responsive: {
+                            0: {
+                                items: 1
+                                , nav: true
+                            }
+                            , 600: {
+                                items: 2
+                                , nav: true
+                            }
+                            , 1000: {
+                                items: 3
+                                , nav: true
+                                , loop: false
+                            }
+                        }
+                    });
+                    $(".owl-carousel-2").owlCarousel({
+                        loop: true
+                        , margin: 30
+                        , responsiveClass: true
+                        , responsive: {
+                            0: {
+                                items: 1
+                                , nav: true
+                            }
+                            , 600: {
+                                items: 1
+                                , nav: true
+                            }
+                            , 1000: {
+                                items: 2
+                                , nav: true
+                                , loop: false
+                            }
+                        }
+                    });
+                    tooltip();
+
+                    // initialize_new();
+
+                    $(document).on( "click", ".jquery_popup", function() {
+                        setTimeout(function(){
+                            $(".popup .chosen-select-2").chosen({
+                                disable_search_threshold: 10,
+                                no_results_text: "Oops, nothing found!",
+                                width: "100%"
+                            });
+                        }, 50);
+                    });
+                }
+
+        </script>
+    </div>
+    <!-- .b-main-container -->
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.popup.min.js"></script>
+    <script src="js/jssor.slider.mini.js"></script>
+    <script src="js/lightcase.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/compiled_lib.js"></script>
+    <script src="js/custum.js"></script>
+    <script src="js/jquery.custom-scrollbar.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
