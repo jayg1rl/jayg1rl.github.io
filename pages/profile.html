@@ -1,0 +1,96 @@
+<div data-name="profile" class="page page-wh">
+
+    <div class="page-content">
+
+        <div class="rowss">
+            <div style="margin-bottom: 32px;">
+                <div class="user-profile compact">
+                    <div class="up-head-w tran-w">
+                        <div class="up-social"></div>
+                        <div class="up-main-info">
+                            <div class="user-avatar-w">
+                                <div class="user-avatar">
+                                    <img style="height: auto;width: 100%;" id="pic" src="img/blank_profile.png" />
+                                </div>
+                            </div>
+                            <h2 class="up-header">{{@global.user.name}}</h2>
+                            <h6 class="up-sub-header">{{$root.email}}</h6></div>
+                        <svg class="decor" width="842px" height="219px" viewBox="0 0 842 219" preserveAspectRatio="xMaxYMax meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(-381.000000, -362.000000)" fill="#FBFBFB">
+                                <path class="decor-path" d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="up-controls">
+                        <div class="row">
+                            <div class="col-50 no-col-50">
+                                <div class="value-pair">
+                                    <a href="#" class="label">Promo Code:</a>
+                                    <a href="#" class="value"><b id="promocode">{{$root.promocode}}</b></a>
+                                </div>
+                            </div>
+                            <div class="col-50 no-col-50 text-right">
+                                <button style="margin-top: -6px;height: 34px;" href="#" class="col button button-fill button-round">
+                                    <i class="picons-thin-icon-thin-0409_wallet_credit_card_money_payment"></i> <span>Fund Wallet</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="up-contents">
+                        <div class="m-b">
+                            <div class="row m-b">
+                                <div class="col-33 col33">
+                                    <div class="el-tablo centered padded-v">
+                                        <div class="value">&#8358;<span id="account">0</span></div>
+                                        <div class="label">Account Balance</div>
+                                    </div>
+                                </div>
+                                <div class="col-33 col33">
+                                    <div class="el-tablo centered padded-v">
+                                        <div class="value" id="delivered-orders">0</div>
+                                        <div class="label">Delivered Orders</div>
+                                    </div>
+                                </div>
+                                <div class="col-33 col33">
+                                    <div class="el-tablo centered padded-v">
+                                        <div class="value" id="pending-orders">0</div>
+                                        <div class="label">&nbsp;&nbsp; Pending Orders</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="toolbar tabbar tabbar-labels no-border">
+        <div class="toolbar-inner">
+            <a href="/home/" class="tab-link">
+                <i class="picons-thin-icon-thin-0045_home_house"></i>
+            </a>
+            <a href="/notification/" class="no-animation tab-link">
+                <i class="icon picons-thin-icon-thin-0303_notification_badge">
+			</i>
+            </a>
+            <a href="/profile/" class="no-animation tab-link active">
+                <i class="picons-thin-icon-thin-0701_user_profile_avatar_man_male"></i>
+            </a>
+            <a href="/settings/" class="no-animation tab-link">
+                <i class="picons-thin-icon-thin-0051_settings_gear_preferences"></i>
+            </a>
+        </div>
+    </div>
+	
+	<div class="popup popup-history">
+    <div class="block">
+      <div class="block-title">Orders History</div>
+	  <div class="timeline timeline-sides"></div>
+    </div>
+  </div>
+  
+</div>

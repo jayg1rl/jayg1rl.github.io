@@ -1,0 +1,59 @@
+<!-- <div class="content-block">
+    <div id="map_canvas" style="height: 300px;border: 1px solid #d5caca;margin-bottom: 24px;background: #d0d2c9;">
+    </div>
+
+    <a href="#" class="button" id="button">Maps</a>
+    <br>
+    <p class="buttons-row">
+        <a href="#" class="button" onclick="fb();">Facebook</a>
+        <a href="#" class="button" onclick="google();">Google</a>
+        <a href="#" class="button" onclick="twitter();">Twitter</a>
+    </p>
+    <p class="buttons-row">
+        <a href="#" class="button" onclick="geocode();">GeoCode</a>
+        <a href="#" class="button" onclick="fingerprint();">Fingerprint Login</a>
+        <a href="#" class="button" onclick="page('login');">Login</a>
+    </p>
+    <p id="results"></p>
+</div> -->
+
+<div data-name="login" class="page login-page no-navbar">
+
+    <div class="page-content">
+        <div class="auth-box-w">
+            <div class="logo-w" style="padding: 5%;margin-top: 10%;">
+                <img style="height: auto;width: 80%;margin-top: 10px;" src="img/Instant pickup 2.png" />
+            </div>
+
+            <h4 class="auth-header" style="display: none;">Login</h4>
+            <form action="#" method="POST" id="login-form">
+                <div class="form-group" style="margin-bottom: 18px;">
+                    <input class="form-control br" id="email" placeholder="Email" type="email">
+                    <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+                </div>
+                <div class="form-group">
+                    <input class="form-control br" id="password" placeholder="Password" type="password">
+                    <div class="pre-icon os-icon os-icon-fingerprint"></div>
+                </div>
+                <div class="col-100">
+                    <button onclick="login();" class="btn btn-primary" id="login-btn" type="button">Login</button>
+                </div>
+            </form>
+			<center><a href="/fp/" class="fff">Forgot Password?</a></center>
+			<br>
+            <div class="line"><span>OR</span></div>
+            <br>
+            <div class="row text-center">
+                <div class="col-100">
+					<a href="#" onclick="fb();">
+                        <i class="social-btn picons-social-icon-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="page-footer fff">Do not have an account? <a href="/signup/" class="fff">Create Account</a>.</p>
+        </div>
+
+    </div>
+
+</div>

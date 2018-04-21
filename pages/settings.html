@@ -1,0 +1,79 @@
+<div class="page nice-bg" data-name="settings">
+    <div class="page-content">
+
+
+        <div class="rowss" style="margin-top: -42px;">
+            <div class="user-profile compact">
+                <div class="up-head-w tran-w">
+                    <div class="up-social"></div>
+                    <div class="up-main-info">
+                        <div class="user-avatar-w">
+                            <div class="user-avatar">
+                                <img style="height: auto;width: 100%;" id="pic" src="img/blank_profile.png" />
+                            </div>
+                        </div>
+                        <h2 class="up-header">{{@global.user.name}}</h2>
+                        <h6 class="up-sub-header">{{$root.email}}</h6></div>
+                    <svg class="decor" width="842px" height="219px" viewBox="0 0 842 219" preserveAspectRatio="xMaxYMax meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g transform="translate(-381.000000, -362.000000)" fill="#EFEFF4">
+                            <path class="decor-path" d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="up-contents">
+                    <div class="element-wrapper">
+                        <div class="element-box">
+                            <br>
+                            <div class="form-group">
+                                <label for=""> Phone</label>
+                                <input class="form-control" placeholder="Phone Number" type="number" />
+                            </div>
+                            <div class="form-group">
+                                <label for=""> Address</label>
+                                <input class="form-control" placeholder="Pickup Address" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label for=""> State</label>
+                                <select class="form-control">
+                                    <option selected value="Lagos">Lagos</option>
+                                    <option value="Abuja">Abuja</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for=""> Country</label>
+                                <select class="form-control">
+                                    <option selected value="Nigeria">Nigeria</option>
+                                </select>
+                            </div>
+
+                            <div class="col-100">
+                                <button class="btn btn-primary" id="login-btn" type="button">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="toolbar tabbar tabbar-labels no-border">
+        <div class="toolbar-inner">
+            <a href="/home/" class="tab-link">
+                <i class="picons-thin-icon-thin-0045_home_house"></i>
+            </a>
+            <a href="/notification/" class="no-animation tab-link">
+                <i class="icon picons-thin-icon-thin-0303_notification_badge">
+			</i>
+            </a>
+            <a href="/profile/" class="no-animation tab-link">
+                <i class="picons-thin-icon-thin-0701_user_profile_avatar_man_male"></i>
+            </a>
+            <a href="/settings/" class="no-animation tab-link active">
+                <i class="picons-thin-icon-thin-0051_settings_gear_preferences"></i>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,224 +1,168 @@
-<!doctype html>
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Welcome to Go places</title>
-    <meta name="description" content="">
-    <!-- <meta http-equiv="Cache-Control" content="public"> -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-       <link href="css/style.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; img-src * data:; script-src 'self' * 'unsafe-inline' 'unsafe-eval' media-src *; connect-src * frame-src *" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>My App</title>
+    <link rel="stylesheet" href="css/framework7.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="icon" href="icon.png">
+    <script type="text/javascript" src="www/cordova_plugins.js"></script>
+    <script>
+        function onLoad() {
+            document.addEventListener('deviceready', intdb, false);
+        }
+    </script>
 </head>
 
-<body class="home">
+<body onload="onLoad()" data-type="" data-name="">
+    <div id="app">
+        <div class="statusbar"></div>
+        <div class="view view-main view-init ios-edges" data-url="/" data-xhrCache="true" data-iosDynamicNavbar="false">
 
-    <div class="b-preloader animated yt-loader">
-        <div class="b-preloader__decor"></div>
-    </div>
-    <header class="b-header clearfix">
-        <a href="index.html" class="logo"> <img src="img/logo_small.png" alt="Go places" title="Go places"> <span>GO Places</span> </a>
-        <a class="weather" href="#"> <img width="35" height="35" src="img/rain-xxl.png" alt="Weather"> <span>+ 24° C</span> </a>
-        <div class="b-header__ctrl">
-            <div class="b-header__ctrl__item"> <a href="Add-Place.html" class="btn btn--black"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Submit your place</span></a> </div>
-            <div class="b-header__ctrl__item">
-                <a href="#" class="ab-item login jquery_popup"> <i class="fa fa-unlock-alt" aria-hidden="true"></i><span>My Account</span>
-                </a>
-            </div>
-            <div class="b-header__ctrl__item">
-                <!--<a href="#" class="b-header__ctrl__item__search"></a>-->
-                <form class="searchbox">
-                    <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp()">
-                    <button type="submit" class="searchbox-submit"><i class="fa fa-search" aria-hidden="true"></i>
-                    </button> <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span> </form>
-            </div>
+            <div data-name="index" class="page">
+
+<div class="list">
+  <ul>
+    <li>
+      <a href="/home/" data-name="atm" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">ATM</div>
+          <div class="item-after"></div>
         </div>
-        <!--.b-header__ctrl-->
-        <div class="b-nav-toggle closed"><img src="img/mobile-logo.png" alt="logo" width="142" height="28"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/home/" data-name="bank" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Banks</div>
+          <div class="item-after"></div>
         </div>
-        <nav class="b-nav fadein">
-            <ul>
-                <li class="menu-item-has-children">
-                    <a href="Places.html"> <i class="fa fa-map-marker" aria-hidden="true"></i>Places </a>
-                </li>
-                <li class="menu-item-has-children"> <a href="Events.html"><i class="fa fa-star-o" aria-hidden="true"></i>Events</a>
-                </li>
-                <li> <a href="Single-Post_Standart.html"><i class="fa fa-bars" aria-hidden="true"></i>Pages</a> </li>
-                <li> <a href="Gallery.html"><i class="fa fa-camera" aria-hidden="true"></i>Gallery</a> </li>
+      </a>
+    </li>
+    <li>
+      <a href="/home/" data-name="airport" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Airport</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+ <li>
+      <a href="/home/" data-name="pharmacy" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Pharmacy</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="school" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">School</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="gym" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Gym</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="hospital" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Hospital</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="shopping_mall" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Shopping_mall</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="library" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Library</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="bar" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Bar</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="night_club" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Club</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
+<li>
+      <a href="/home/" data-name="hotel" onclick="setType(this);" class="item-link item-content">
+        <div class="item-media"><i class="icon icon-f7"></i></div>
+        <div class="item-inner">
+          <div class="item-title">Hotel</div>
+          <div class="item-after"></div>
+        </div>
+      </a>
+    </li>
 
-                <li class="menu-item-has-children"> <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i>Most searched places</a>
+  </ul>
+</div>
 
-                </li>
-                <li> <a href="Single-Post_Standart.html"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a> </li>
-            </ul>
-        </nav>
-        <!--.b-nav-->
-    </header>
-    <!-- .b-header -->
-    <div class="b-main-container" id="content">
-        <div class="b-promo lazy" data-src="img/home-bg.jpg">
-            <div class="b-placeholder"></div>
-            <div class="b-stars">
-                <div class="stars"></div>
             </div>
-            <div class="overlay"></div>
-            <div class="b-promo__search container">
-                <h1 class="b-promo__title">Find places or events with<p> GO-PLACES</p></h1>
-                <h6 class="b-promo__sub-title">See and visit interesting places. Share experiences with your friends.</h6>
-                <form method="post" action="#">
-                    <div class="b-promo__form">
-                        <div class="b-promo__form__col1">
-                            <input type="text" class="b-promo__form__input m--border-radius-left" placeholder="Find places or events" name="search"> </div>
-                        <div class="b-promo__form__col1">
-                            <input type="text" class="b-promo__form__input" placeholder="Enter Location" name="location"> </div>
-                        <div class="b-promo__form__col1">
-                            <select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
-                                <option value="United States">Choose a Country...</option>
-                                <option value="United Kingdom">Nigeria</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="Aland Islands">Aland Islands</option>
-                                <option value="Albania">Albania</option>
-                                <option value="Algeria">Algeria</option>
-                                <option value="American Samoa">American Samoa</option>
-                                <option value="Andorra">Andorra</option>
-                                <option value="Angola">Angola</option>
-                                <option value="Anguilla">Anguilla</option>
-                                <option value="Antarctica">Antarctica</option>
-                                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Armenia">Armenia</option>
-                                <option value="Aruba">Aruba</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Azerbaijan">Azerbaijan</option>
-                                <option value="Bahamas">Bahamas</option>
-                                <option value="Bahrain">Bahrain</option>
-                            </select>
-                        </div>
-                        <div class="b-promo__form__col2">
-                            <a href="places.html"><button class="btn btn-success m--border-radius-right">Search</button></a>
 
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
-        <script>
-            main_js = function () {
-
-                    'use strict';
-
-                    $('.b-slider').addClass('visible');
-
-                    //chosen-select init
-
-                    $(".chosen-select").chosen({
-                      disable_search_threshold: 10,
-                      no_results_text: "Oops, nothing found!",
-                      width: "100%"
-                    });
-
-
-                    //********************************************** Stars script **************************************** //
-
-                    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-                    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-                    if (isChrome || isSafari) {
-                        for (var e = 0; 400 > e; e++) {
-                            var f = document.createElement("div");
-                            f.className = "star";
-                            $(".stars").append(f);
-                            var g = (.4 * Math.random() + .1).toFixed(3)
-                                , h = 500 + 300 * Math.random();
-                            $(f).css("transform-origin", "0 0 " + h + "px")
-                                , $(f).css("transform", " translate3d(0,0,-" + h + "px) rotateY(" + 360 * Math.random() + "deg) rotateX(" + -50 * Math.random() + "deg) scale(" + g + "," + g + ")");
-                        }
-                    }
-
-
-                    $(".owl-carousel-1").owlCarousel({
-                        loop: true
-                        , margin: 30
-                        , responsiveClass: true
-                        , responsive: {
-                            0: {
-                                items: 1
-                                , nav: true
-                            }
-                            , 600: {
-                                items: 2
-                                , nav: true
-                            }
-                            , 1000: {
-                                items: 3
-                                , nav: true
-                                , loop: false
-                            }
-                        }
-                    });
-                    $(".owl-carousel-2").owlCarousel({
-                        loop: true
-                        , margin: 30
-                        , responsiveClass: true
-                        , responsive: {
-                            0: {
-                                items: 1
-                                , nav: true
-                            }
-                            , 600: {
-                                items: 1
-                                , nav: true
-                            }
-                            , 1000: {
-                                items: 2
-                                , nav: true
-                                , loop: false
-                            }
-                        }
-                    });
-                    tooltip();
-
-                    // initialize_new();
-
-                    $(document).on( "click", ".jquery_popup", function() {
-                        setTimeout(function(){
-                            $(".popup .chosen-select-2").chosen({
-                                disable_search_threshold: 10,
-                                no_results_text: "Oops, nothing found!",
-                                width: "100%"
-                            });
-                        }, 50);
-                    });
-                }
-
-        </script>
+        </div>
     </div>
-    <!-- .b-main-container -->
 
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/chosen.jquery.min.js"></script>
-    <script src="js/ion.rangeSlider.min.js"></script>
-    <script src="js/jquery.popup.min.js"></script>
-    <script src="js/jssor.slider.mini.js"></script>
-    <script src="js/lightcase.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/tooltip.js"></script>
-    <script src="js/compiled_lib.js"></script>
-    <script src="js/custum.js"></script>
-    <script src="js/jquery.custom-scrollbar.js"></script>
-    <script src="js/main.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyop03PnmE_uwUaop9QRIx8PJOX8YUlgU&libraries=places" defer></script>
+    <script type="text/javascript" src="js/framework7-v7.min.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <s
+    <script>
+	    // Phone Navigation buttons (back button & menu keys)
+        function intdb() {
+        try {
+            navigator.app.overrideButton("backbutton", true);
+            navigator.app.overrideButton("menubutton", true);
+            document.addEventListener("backbutton", keydown, false);
+            document.addEventListener("menubutton", OpenMenu, false);
+        } catch (e) {}
+        }
+    </script>
 </body>
 
 </html>
